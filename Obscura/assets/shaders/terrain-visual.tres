@@ -51,7 +51,7 @@ default_value = 7.0
 [sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_orkpx"]
 parameter_name = "color_water"
 default_value_enabled = true
-default_value = Color(0, 0.0862745, 1, 1)
+default_value = Color(0.343219, 0.666155, 0.716338, 1)
 
 [sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_gossf"]
 parameter_name = "color_beach"
@@ -61,7 +61,7 @@ default_value = Color(1, 0.787152, 0.607912, 1)
 [sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_1xvkn"]
 parameter_name = "color_grass"
 default_value_enabled = true
-default_value = Color(0.37128, 0.767443, 2.31028e-06, 1)
+default_value = Color(0.654294, 0.747203, 0.468063, 1)
 
 [sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_0mqwe"]
 parameter_name = "color_mountain"
@@ -100,11 +100,11 @@ input_name = "vertex"
 code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
 
-uniform vec4 color_water : source_color = vec4(0.000000, 0.086274, 1.000000, 1.000000);
+uniform vec4 color_water : source_color = vec4(0.343219, 0.666155, 0.716338, 1.000000);
 uniform float water_height : hint_range(0, 10) = 0;
 uniform vec4 color_beach : source_color = vec4(1.000000, 0.787152, 0.607912, 1.000000);
 uniform float beach_height : hint_range(0, 10) = 1;
-uniform vec4 color_grass : source_color = vec4(0.371280, 0.767443, 0.000002, 1.000000);
+uniform vec4 color_grass : source_color = vec4(0.654294, 0.747203, 0.468063, 1.000000);
 uniform float grass_height : hint_range(0, 10) = 2;
 uniform vec4 color_mountain : source_color = vec4(0.334122, 0.334122, 0.334122, 1.000000);
 uniform float mountain_height : hint_range(0, 10) = 5;
