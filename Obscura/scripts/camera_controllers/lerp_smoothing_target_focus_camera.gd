@@ -1,7 +1,6 @@
 class_name LerpSmoothingTargetFocusCamera
 extends CameraControllerBase
 
-var _catchup_delay_timer:Timer
 # this quantity should always be set higher than the vessel's speed
 @export var lead_speed:float = target.BASE_SPEED * 1.1
 @export var catchup_delay_duration:float = 0.05
@@ -9,6 +8,7 @@ var _catchup_delay_timer:Timer
 @export var leash_distance:float = 10
 @export var cross_length:float = 5.0
 
+var _catchup_delay_timer:Timer
 
 func _ready() -> void:
 	super()

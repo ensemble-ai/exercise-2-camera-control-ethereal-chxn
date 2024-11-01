@@ -44,6 +44,20 @@ func _process(delta: float) -> void:
 	var diff_from_speedup_up = (tpos.z + target.HEIGHT / 2.0) - (cpos.z + speedup_up)
 	var diff_from_speedup_down = (tpos.z - target.HEIGHT / 2.0) - (cpos.z + speedup_down)
 	
+	# no moving if inside speedup zone
+	# left
+	if diff_from_pushbox_left > 0:
+		pass
+	# right
+	if diff_from_pushbox_right < 0:
+		pass
+	# down
+	if diff_from_pushbox_down > 0:
+		pass
+	# up
+	if diff_from_pushbox_up < 0:
+		pass
+	
 	# if vessel touching outer pushbox border
 	# top left corner
 	if diff_from_pushbox_left < 0 and diff_from_pushbox_up > 0:
@@ -84,7 +98,7 @@ func _process(delta: float) -> void:
 	and target.velocity != Vector3(0, 0, 0):
 		global_position.x += push_ratio * target.BASE_SPEED * delta
 	# up
-	if diff_from_speedup_up > 0 and diff_from_speedup_up < 0 \
+	if diff_from_speedup_up > 0 and diff_from_pushbox_up < 0 \
 	and target.velocity != Vector3(0, 0, 0):
 		global_position.z += push_ratio * target.BASE_SPEED * delta
 	# down
@@ -93,6 +107,7 @@ func _process(delta: float) -> void:
 		global_position.z -= push_ratio * target.BASE_SPEED * delta
 	
 	super(delta)
+
 
 func draw_logic() -> void:
 	var mesh_instance := MeshInstance3D.new()
