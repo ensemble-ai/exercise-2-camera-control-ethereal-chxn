@@ -125,8 +125,6 @@ Here is another example as well.
 I really couldn't find any issues with code style, great job!  
 
 #### Style Guide Exemplars ####
-
-## Best Practices ## 
 Everything was formatted correctly, all variables were declared in the proper positioning, functions were organized properly, basic comments made interpretation easy w/o overloading program with in-line comments. 
 
 * [all function formatting universal, I.E. indentations, spacing, etc.](https://github.com/ensemble-ai/exercise-2-camera-control-ethereal-chxn/blob/dda45e9830e730ad7a24b74d9f62be622b04e16e/Obscura/scripts/camera_controllers/position_lock_lerp_camera.gd#L15)
@@ -135,6 +133,7 @@ Everything was formatted correctly, all variables were declared in the proper po
 
 * [universal organization/correct organization of class name and export/public variables](https://github.com/ensemble-ai/exercise-2-camera-control-ethereal-chxn/blob/dda45e9830e730ad7a24b74d9f62be622b04e16e/Obscura/scripts/camera_controllers/four_way_speedup_push_zone_camera.gd#L1)
 
+## Best Practices ## 
 
 
 ### Description ###
